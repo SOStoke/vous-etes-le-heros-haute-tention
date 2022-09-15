@@ -6,4 +6,4 @@
 
 **Inspiration**: [Top Gun](https://www.imdb.com/title/tt0092099/)
 
-**Palette de couleur**:[Coolors](https://coolors.co/082b3d-fcf7ff-a663cc-ff331f-f4e04d)
+**Palette de couleurs**: [coolors.co](https://coolors.co/082b3d-fcf7ff-a663cc-ff331f-f4e04d)
