@@ -52,6 +52,43 @@ const chapterObj = {
      },
    },
    
+    start: {
+     options: [
+     {firstChapter: {text: "Vous vous êtes fait enroler par l'armée de l'air et on vous donne votre première mission", action: "goToChapter(firstChapterObj)"},},
+     ], 
+     subtitle: "Utlime mission",
+     text: "Vous parter en jet pour une mission",
+     status: function(){
+     return `${this.subtitle} : ${this.text}`
+     },
+   },
+     
+    firstChapterObj: {
+     options: [
+     {attendre: {text: "Il n'arrive pas à temps, donc Cowboy et vous mourez", action: "goToChapter(start)"},},
+     {aider: {text: "Vous parvenez à repousser l'ennemi", action: "goToChapter(secondChapterObj)"},},
+     {abandonner: {text: "Cowboy se fait éliminer", action: "goToChapter(secondChapterObj)"},},
+     ],
+     subtitle: "Cowboy en détresse",
+     text: "Cowboy est poursuivi par deux chasseurs ennemis",
+     status: function(){
+     return `${this.subtitle} : ${this.text}`
+     },
+   },
+   
+   
+    secondChapterObj: {
+     options: [
+     {vitesse: {text: "Les missiles vous rattrapent sans efforts et vous mourez", action: "goToChapter(start)"},},
+     {bas: {text: "Ils ne vous détectent pas et vous parvenez à détruire leur laboratoire", action: "goToChapter(thirdChapterObj)"},},
+     {haut: {text: "Les missiles vous détectent toujours et vous mourez", action: "goToChapter(start)"},},
+     ],
+     subtitle: "Missiles chercheurs",
+     text: "On voie des lance-missiles au dessus des montagnes",
+     status: function(){
+     return `${this.subtitle} : ${this.text}`
+     },
+   },
     
    thirdChapterObj: {
      options: [
