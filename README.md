@@ -11,8 +11,43 @@
 ## Diagramme
 <img src="https://github.com/SOStoke/vous-etes-le-heros-haute-tention/blob/main/assets/Diagramme.jpg" />
 
+<!DOCTYPE html>
+<html lang="fr">
 
-const chapterObj = {
+<head>
+  <meta charset="UTF-8">
+  <title>Haute tention</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheet.css">
+  
+</head>
+
+<body>
+
+  <div class="game">
+    <div class="frame"></div>
+    <h1>Haute Tention</h1>
+    <div class="contenu">
+      <h2>Sed ut perspiciatis</h2>
+      <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam</h3>
+      <img src="image/jet.jpg" class="image">
+      <br></br>
+      <div class="bouton">
+
+
+
+        <div class="flex">
+          <div class="element no1"><button id="btn" type="button">ullamco laboris</button></div>
+          <div class="element no2"><button id="btn" type="button">nisi ut aliquip</button></div>
+          <div class="element no3"><button id="btn" type="button">ex ea commodo</button></div>
+        </div>
+      </div>
+    </div>
+    <script>
+    const chapterObj = {
  
     start: {
      options: [
@@ -38,8 +73,7 @@ const chapterObj = {
      },
    },
    
-  
- 
+   
     secondChapterObj: {
      options: [
      {vitesse: {text: "Les missiles vous rattrapent sans efforts et vous mourez", action: "goToChapter(start)"},},
@@ -113,3 +147,10 @@ const chapterObj = {
      
    }
    
+     </script>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
