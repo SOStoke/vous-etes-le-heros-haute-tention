@@ -1,0 +1,100 @@
+html {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(153, 98, 201);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+  }
+  h1{
+    position: relative;
+    color:#ffd700;
+    font-family: "Topgun";
+    font-size: 62px;
+    margin-top: 30px;
+    letter-spacing: 0.1em;
+
+  }
+
+  h2{
+    color:white;
+    font-size: 30px;
+
+  }
+
+  h3{
+    color:white;
+    padding: 0 10px 0 80px;
+    margin-left: -50px;
+    text-align: left;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+
+  }
+
+  .game {
+    box-sizing: border-box;
+    position: relative;
+    background-image: linear-gradient(to bottom right,#b67d0d ,rgb(130, 76, 210), #041E42);
+    border: 20px ridge gold;
+    box-shadow: -1px 2px 42px 7px rgba(0, 0, 0, 0.5);
+    width: 600px;
+    height:750px;
+    text-align: center;
+    
+   
+    
+  }
+
+  .contenu{
+    margin-top: -65px;
+
+  }
+  
+ 
+  .image {
+    position: relative;
+    width: 90%;
+    height: 60%;
+    padding-top: 10px;
+    margin-top: -3%;
+
+  }
+  
+  #btn{
+    
+    background-color: gold;
+    justify-content: space-between;
+    color:black;
+    font-size: 105%;
+    padding: 5px 15px 10px 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 3px solid white;
+
+}
+
+#btn:hover{
+  background-color: red;
+  padding: 5px 15px 20px 10px;
+
+}
+
+.flex {
+    display:flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+
+  }
+    
+  @font-face {
+    src: url("/fontes/TOP\ GUN.ttf") format("woff2");
+    font-family: "Topgun";
+    font-style: normal;
+    font-weight: 200;
+
+  }
+
+  
