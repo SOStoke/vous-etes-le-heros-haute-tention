@@ -38,15 +38,21 @@ const chapterObj = {
      },
    },
    
-   
+  
+ 
     secondChapterObj: {
      options: [
      {vitesse: {text: "Les missiles vous rattrapent sans efforts et vous mourez", action: "goToChapter(start)"},},
-     {bas
+     {bas: {text: "Ils ne vous détectent pas et vous parvenez à détruire leur laboratoire", action: "goToChapter(thirdChapterObj)"},},
+     {haut: {text: "Les missiles vous détectent toujours et vous mourez", action: "goToChapter(start)"},},
+     ],
+     subtitle: "Missiles chercheurs",
+     text: "On voie des lance-missiles au dessus des montagnes",
+     status: function(){
+     return `${this.subtitle} : ${this.text}`
+     },
    },
    
-    
-   },
     
    thirdChapterObj: {
      options: [
