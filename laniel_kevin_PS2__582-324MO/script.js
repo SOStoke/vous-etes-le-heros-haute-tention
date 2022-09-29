@@ -93,7 +93,7 @@ const chapterObj = {
    }
    
    
-    function goToChapter(chapterName) {
+    function goToChapter(chapterName, chap) {
      console.log(`${chapterObj[chapterName].subtitle}`);
      console.log(`${chapterObj[chapterName].text}`);
      
