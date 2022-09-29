@@ -11,7 +11,7 @@ const chapterObj = {
      return `${this.subtitle} : ${this.text}`
      },
    },
-     
+        
     firstChapterObj: {
      options: [
      {attendre: {text: "Il n'arrive pas à temps, donc Cowboy et vous mourez", action: "goToChapter(start)"},},
