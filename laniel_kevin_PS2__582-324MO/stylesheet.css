@@ -5,13 +5,13 @@ html {
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
 
   }
   h1{
     position: relative;
     color:#ffd700;
-    font-family: "Topgun";
+    font-family:"TOPGUN";
     font-size: 62px;
     margin-top: 30px;
     letter-spacing: 0.1em;
@@ -19,9 +19,10 @@ html {
   }
 
   h2{
+    padding-top: 30px;
     color:white;
     font-size: 30px;
-
+   
   }
 
   h3{
@@ -31,6 +32,11 @@ html {
     text-align: left;
     font-family: 'Roboto Mono', monospace;
     font-size: 16px;
+    width: 515px;
+    height: 100px;
+    overflow-y: scroll;
+    
+
 
   }
 
@@ -44,8 +50,6 @@ html {
     height:750px;
     text-align: center;
     
-   
-    
   }
 
   .contenu{
@@ -54,16 +58,14 @@ html {
   }
   
  
-  .image {
+  #image {
     position: relative;
-    width: 90%;
-    height: 60%;
     padding-top: 10px;
     margin-top: -3%;
 
   }
   
-  #btn{
+  .btn{
     
     background-color: gold;
     justify-content: space-between;
@@ -71,15 +73,18 @@ html {
     font-size: 105%;
     padding: 5px 15px 10px 10px;
     font-weight: bold;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
     border-radius: 10px;
     border: 3px solid white;
+    width: 150px;
 
 }
 
-#btn:hover{
+.btn:hover{
   background-color: red;
-  padding: 5px 15px 20px 10px;
-
+  padding: 5px 15px 10px 10px;
+  width: 200px;
 }
 
 .flex {
