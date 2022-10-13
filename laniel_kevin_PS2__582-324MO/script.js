@@ -1,7 +1,7 @@
 const chapterObj = {
   startObj: {
     subtitle: "Utlime mission",
-    text: "Une journée comme les autres, alors que vous aviez seulement 6 ans, un incident est venu marquer votre vie à tous jamais. Votre père était l’un des meilleurs pilotes de chasse de l’armée des États-Unis et aussi votre héros. Il avait accepté une dernière mission en tant que chef d’escadron. Alors qu’il acheva sa mission, un f18 invisibles sur les radars fut son apparition et abattu son avion. À ce jour, votre but est de lui faire hommage en devenant le meilleur pilote de cette époque. Vous avez passé l’académie d’aviation avec brio. Après. Plusieurs années de tests et de mission de ravitaillement, vous prêt à faire votre première mission d’ordre supérieur. Celle-ci risque d’être des plus dangereuses, puisqu’elle évoque d’aller détruire un laboratoire d’armes chimiques hautement surveiller. Plusieurs mois de préparations ont passé et le grand jour est arrivé. Êtes-vous prêt à faire cette mission de vie ou de mort?",
+    text: "Une journée comme les autres, alors que vous aviez seulement 6 ans, un incident est venu marquer votre vie à tous jamais. Votre père était l’un des meilleurs pilotes de chasse de l’armée des États-Unis et aussi votre héros. Il avait accepté une dernière mission en tant que chef d’escadron. Alors qu’il acheva sa mission, un f18 invisibles sur les radars fut son apparition et abattu son avion. À ce jour, votre but est de lui faire hommage en devenant le meilleur pilote de cette époque. Vous avez passé l’académie d’aviation avec brio. Après plusieurs années de tests et de petites missions de ravitaillements, vous êtes prêt à faire votre première mission d’ordre supérieur. Celle-ci risque d’être des plus dangereuses, puisqu’elle évoque d’aller détruire un laboratoire d’armes chimiques hautement surveiller. Plusieurs mois de préparations se sont découlés et le grand jour est arrivé. Êtes-vous prêt à faire cette mission de vie ou de mort?",
     img: "image/jet.jpg",
     options: [
       {
@@ -60,7 +60,7 @@ const chapterObj = {
   },
 
   secondChapterObj: {
-    subtitle: "Missiles chercheurs",
+    subtitle: "Surprise explosive",
     text: "Arriver proche de l’objectif, vous apercevez des lance-missiles à têtes chercheuse positionnés en haut des montagnes risquant de vous anéantir en un clin d’œil. Vous n’avez plus beaucoup de temps et devez prendre une décision afin d’éviter le pire qu’elle vous traque. Prendre de la vitesse et tenter de les semer, passer en dessous de leur vision où aller le plus haut possible.",
     img: "image/jet4.jpg",
     options: [
@@ -120,7 +120,7 @@ const chapterObj = {
   },
 
   thirdChapterObj: {
-    subtitle: "Visite surprise",
+    subtitle: "Fini ou pas",
     text: "Le laboratoire est maintenant dans votre ligne de mire et vous larguer la bombe directement dessus mettant fin à la mission. Maintenant, le plus difficile reste de revenir sain et sauf. Malheureusement, cela tombe pour le pire quand un débris d’explosion vient vous heurter et vous donc force à vous éjecter. Arrivé sur terre ennemie, vous devez faire vite et trouver une solution afin de ne pas être repéré par les troupes déjà à votre recherche. Vous pouvez vous cacher dans la forêt en espérant qu’il ne vous retrouve pas où tenter d’atteindre le hangar plus loin appeler les renforts.",
     img: "image/jet7.jpg",
     options: [
@@ -206,7 +206,7 @@ const chapterObj = {
     options: [
       {
         text: "",
-        action: "",
+        action: ".setVisible(false)",
       },
       {
         text: "RECOMMENCER",
@@ -214,7 +214,7 @@ const chapterObj = {
       },
       {
         text: "",
-        action: "",
+        action: ".setVisible(false)",
       }
     ],
   },
@@ -245,18 +245,34 @@ function goToChapter(chapterName) {
   document.getElementById("txt").innerHTML = chapterObj[chapterName].text;
   document.getElementById("image").src = chapterObj[chapterName].img;
   document.getElementById("btn1").innerHTML = chapterObj[chapterName].options[0].text;
+  document.getElementById("btn1").onclick = chapterObj[chapterName].options[0].action;
   document.getElementById("btn2").innerHTML = chapterObj[chapterName].options[1].text;
+  document.getElementById("btn2").onclick = chapterObj[chapterName].options[0].action;
   document.getElementById("btn3").innerHTML = chapterObj[chapterName].options[2].text;
+  document.getElementById("btn3").onclick = chapterObj[chapterName].options[0].action;
   
+
   console.log(`${chapterObj[chapterName].subtitle}`);
   console.log(`${chapterObj[chapterName].text}`);
-  console.log(`${chapterObj[chapterName].options[0].text}`);
-  console.log(`${chapterObj[chapterName].options[0].action}`);
-  console.log(`${chapterObj[chapterName].options[1].text}`);
-  console.log(`${chapterObj[chapterName].options[1].action}`);
-  console.log(`${chapterObj[chapterName].options[2].text}`);
-  console.log(`${chapterObj[chapterName].options[2].action}`);
+  for (let index = 0; index < 3; index++) {
+    const tab = chapterObj[chapterName].options[index];
+    console.log(tab);
+  }
+  for (let index = 0; index < 3; index++) {
+    const tab = chapterObj[chapterName].options[index].text;
+    console.log(tab);
+  }
+  for (let index = 0; index < 3; index++) {
+    const tab1 = chapterObj[chapterName].options[index].action;
+    console.log(tab1);
+  }
+
   
+   //console.log(`${chapterObj[chapterName].options[0].text}`);
+   //console.log(`${chapterObj[chapterName].options[0].action}`);
+   //console.log(`${chapterObj[chapterName].options[1].text}`);
+   //console.log(`${chapterObj[chapterName].options[1].action}`);
+   //console.log(`${chapterObj[chapterName].options[2].text}`);
+   //console.log(`${chapterObj[chapterName].options[2].action}`);
    };  
     
-
