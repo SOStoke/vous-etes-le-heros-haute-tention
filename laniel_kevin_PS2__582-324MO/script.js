@@ -10,7 +10,7 @@ const chapterObj = {
       },
       {
         text: "COMMENCER",
-        action: "goToChapter(firstChapterObj)",
+        action: "goToChapter('firstChapterObj')",
       },
       {
         text: "",
@@ -26,15 +26,15 @@ const chapterObj = {
     options: [
       {
         text: "ATTENDRE",
-        action: "goToChapter(firstDeathObj)",
+        action: "goToChapter('firstDeathObj')",
       },
       {
         text: "AIDER",
-        action: "goToChapter(secondChapterObj)",
+        action: "goToChapter('secondChapterObj') function keyIsFound()",
       },
       {
         text: "ABANDONNER",
-        action: "goToChapter(secondChapterObj)",
+        action: "goToChapter('secondChapterObj')",
       },
     ],
   },
@@ -50,7 +50,7 @@ const chapterObj = {
       },
       {
         text: "RECOMMENCER",
-        action: "goToChapter(startObj)",
+        action: "goToChapter('startObj')",
       },
       {
         text: "",
@@ -66,15 +66,15 @@ const chapterObj = {
     options: [
       {
         text: "VITESSE",
-        action: "goToChapter(secondDeathObj)",
+        action: "goToChapter('secondDeathObj')",
       },
       {
         text: "BAS",
-        action: "goToChapter(thirdChapterObj)",
+        action: "goToChapter'('thirdChapterObj')",
       },
       {
         text: "HAUT",
-        action: "goToChapter(thirdDeathObj)",
+        action: "goToChapter('thirdDeathObj')",
       },
     ],
   },
@@ -90,7 +90,7 @@ const chapterObj = {
       },
       {
         text: "RECOMMENCER",
-        action: "goToChapter(startObj)",
+        action: "goToChapter('startObj')",
       },
       {
         text: "",
@@ -110,7 +110,7 @@ const chapterObj = {
       },
       {
         text: "RECOMMENCER",
-        action: "goToChapter(startObj)",
+        action: "goToChapter('startObj')",
       },
       {
         text: "",
@@ -126,7 +126,7 @@ const chapterObj = {
     options: [
       {
         text: "CACHER",
-        action: "goToChapter(fourthDeathObj)",
+        action: "goToChapter('fourthDeathObj')",
       },
       {
         text: "",
@@ -134,7 +134,7 @@ const chapterObj = {
       },
       {
         text: "HANGAR",
-        action: "goToChapter(fourthChapterObj)",
+        action: "goToChapter('fourthChapterObj')",
       },
     ],
   },
@@ -150,7 +150,7 @@ const chapterObj = {
       },
       {
         text: "RECOMMENCER",
-        action: "goToChapter(startObj)",
+        action: "goToChapter('startObj')",
       },
       {
         text: "",
@@ -166,15 +166,15 @@ const chapterObj = {
     options: [
       {
         text: "RESTER",
-        action: "goToChapter(fifthDeathObj)",
+        action: "goToChapter('fifthDeathObj')",
       },
       {
         text: "VOLER",
-        action: "goToChapter(fifthChapterObj)",
+        action: "function cowboyIsAlive()",
       },
       {
         text: "VOLER(Cowboy)",
-        action: "goToChapter(sixthDeathObj)",
+        action: "goToChapter('sixthDeathObj')",
       },
     ],
   },
@@ -190,7 +190,7 @@ const chapterObj = {
       },
       {
         text: "RECOMMENCER",
-        action: "goToChapter(startObj)",
+        action: "goToChapter('startObj')",
       },
       {
         text: "",
@@ -210,11 +210,11 @@ const chapterObj = {
       },
       {
         text: "RECOMMENCER",
-        action: "goToChapter(startObj)",
+        action: "goToChapter('startObj')",
       },
       {
         text: "",
-        action: ".setVisible(false)",
+        action: ".setVisible('false')",
       }
     ],
   },
@@ -230,7 +230,7 @@ const chapterObj = {
       },
       {
         text: "RECOMMENCER",
-        action: "goToChapter(startObj)",
+        action: "goToChapter('startObj')",
       },
       {
         text: "",
@@ -266,7 +266,7 @@ function goToChapter(chapterName) {
     const tab1 = chapterObj[chapterName].options[index].action;
     console.log(tab1);
   }
-
+     
   
    //console.log(`${chapterObj[chapterName].options[0].text}`);
    //console.log(`${chapterObj[chapterName].options[0].action}`);
@@ -276,3 +276,17 @@ function goToChapter(chapterName) {
    //console.log(`${chapterObj[chapterName].options[2].action}`);
    };  
     
+let keyFounded = false;
+
+function keyIsFound() {
+  keyFounded = true;
+}
+
+function cowboyIsAlive() {
+  if (keyFounded == true) {
+    goToChapter("fifthChapterObj");
+  } else {
+    goToChapter("sixthDeathObj");
+  }
+}
+
