@@ -1,3 +1,10 @@
+const bouton1 = document.getElementById("btn1");
+ 
+const bouton2 = document.getElementById("btn2");
+
+const bouton3 = document.getElementById("btn3");
+
+
 const chapterObj = {
   startObj: {
     subtitle: "Utlime mission",
@@ -10,7 +17,9 @@ const chapterObj = {
       },
       {
         text: "COMMENCER",
-        action: "goToChapter('firstChapterObj')",
+        action: "btn.addEventListner("click", function(){ goToChapter(firstChapterObj)",
+      
+        
       },
       {
         text: "",
@@ -244,14 +253,9 @@ function goToChapter(chapterName) {
   document.getElementById("sub").innerHTML = chapterObj[chapterName].subtitle;
   document.getElementById("txt").innerHTML = chapterObj[chapterName].text;
   document.getElementById("image").src = chapterObj[chapterName].img;
-  document.getElementById("btn1").innerHTML = chapterObj[chapterName].options[0].text;
-  document.getElementById("btn1").onclick = chapterObj[chapterName].options[0].action;
+  document.getElementById("btn1").innerHTML = chapterObj[chapterName].options[1].text;
   document.getElementById("btn2").innerHTML = chapterObj[chapterName].options[1].text;
-  document.getElementById("btn2").onclick = chapterObj[chapterName].options[0].action;
   document.getElementById("btn3").innerHTML = chapterObj[chapterName].options[2].text;
-  document.getElementById("btn3").onclick = chapterObj[chapterName].options[0].action;
-  
-
   console.log(`${chapterObj[chapterName].subtitle}`);
   console.log(`${chapterObj[chapterName].text}`);
   for (let index = 0; index < 3; index++) {
@@ -267,7 +271,7 @@ function goToChapter(chapterName) {
     console.log(tab1);
   }
      
-  
+  bouton1.onclick = function() { goToChapter(chapterName)}
    //console.log(`${chapterObj[chapterName].options[0].text}`);
    //console.log(`${chapterObj[chapterName].options[0].action}`);
    //console.log(`${chapterObj[chapterName].options[1].text}`);
@@ -278,15 +282,20 @@ function goToChapter(chapterName) {
     
 let keyFounded = false;
 
-function keyIsFound() {
+let changeStateKeyFounded = function() {
   keyFounded = true;
+
 }
 
-function cowboyIsAlive() {
-  if (keyFounded == true) {
+let isKeyFounded = function() {
+  if (keyFounded) {
     goToChapter("fifthChapterObj");
   } else {
     goToChapter("sixthDeathObj");
   }
 }
+
+
+
+
 
