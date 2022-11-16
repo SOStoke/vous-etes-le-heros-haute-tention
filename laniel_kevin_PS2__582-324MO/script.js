@@ -4,6 +4,7 @@ const bouton2 = document.getElementById("btn2");
 
 const bouton3 = document.getElementById("btn3");
 
+//goToChapter("startObj");
 
 const chapterObj = {
   startObj: {
@@ -17,7 +18,7 @@ const chapterObj = {
       },
       {
         text: "COMMENCER",
-        action: "btn.addEventListner("click", function(){ goToChapter(firstChapterObj)",
+        action: bouton2.addEventListener("click", function () {goToChapter('firstChapterObj');}),
       
         
       },
@@ -35,15 +36,16 @@ const chapterObj = {
     options: [
       {
         text: "ATTENDRE",
-        action: "goToChapter('firstDeathObj')",
+        action:  bouton1.addEventListener("click", function () {goToChapter('firstDeathObj')}),
       },
       {
         text: "AIDER",
-        action: "goToChapter('secondChapterObj') function keyIsFound()",
+        action:  bouton2.addEventListener("click", function () {goToChapter('secondChapterObj');
+        changeStateKeyFounded()})   
       },
       {
         text: "ABANDONNER",
-        action: "goToChapter('secondChapterObj')",
+        action:  bouton3.addEventListener("click", function () {goToChapter('secondChapterObj')}),
       },
     ],
   },
@@ -59,7 +61,7 @@ const chapterObj = {
       },
       {
         text: "RECOMMENCER",
-        action: "goToChapter('startObj')",
+        action: bouton2.addEventListener("click", function () {goToChapter('startObj')}),
       },
       {
         text: "",
@@ -75,15 +77,15 @@ const chapterObj = {
     options: [
       {
         text: "VITESSE",
-        action: "goToChapter('secondDeathObj')",
+        action: bouton1.addEventListener("click", function () {goToChapter('secondDeathObj')}),
       },
       {
         text: "BAS",
-        action: "goToChapter'('thirdChapterObj')",
+        action: bouton2.addEventListener("click", function () {goToChapter('thirdChapterObj')}),
       },
       {
         text: "HAUT",
-        action: "goToChapter('thirdDeathObj')",
+        action: bouton3.addEventListener("click", function () {goToChapter('thirdDeathObj')}),
       },
     ],
   },
@@ -99,7 +101,7 @@ const chapterObj = {
       },
       {
         text: "RECOMMENCER",
-        action: "goToChapter('startObj')",
+        action: bouton2.addEventListener("click", function () {goToChapter('startObj')}),
       },
       {
         text: "",
@@ -119,7 +121,7 @@ const chapterObj = {
       },
       {
         text: "RECOMMENCER",
-        action: "goToChapter('startObj')",
+        action: bouton2.addEventListener("click", function () {goToChapter('startObj')}),
       },
       {
         text: "",
@@ -135,15 +137,15 @@ const chapterObj = {
     options: [
       {
         text: "CACHER",
-        action: "goToChapter('fourthDeathObj')",
+        action: bouton1.addEventListener("click", function () {goToChapter('fourthDeathObj')}),
       },
       {
         text: "",
-        action: "",
+        action: "", 
       },
       {
         text: "HANGAR",
-        action: "goToChapter('fourthChapterObj')",
+        action: bouton3.addEventListener("click", function () {goToChapter('fourthChapterObj')}),
       },
     ],
   },
@@ -159,7 +161,7 @@ const chapterObj = {
       },
       {
         text: "RECOMMENCER",
-        action: "goToChapter('startObj')",
+        action: bouton2.addEventListener("click", function () {goToChapter('startObj')}),
       },
       {
         text: "",
@@ -175,16 +177,13 @@ const chapterObj = {
     options: [
       {
         text: "RESTER",
-        action: "goToChapter('fifthDeathObj')",
+        action: bouton1.addEventListener("click", function () {goToChapter('fifthDeathObj')}),
       },
       {
         text: "VOLER",
-        action: "function cowboyIsAlive()",
+        action: bouton2.addEventListener("click", function () {isKeyFounded()}),
       },
-      {
-        text: "VOLER(Cowboy)",
-        action: "goToChapter('sixthDeathObj')",
-      },
+    
     ],
   },
 
@@ -199,7 +198,7 @@ const chapterObj = {
       },
       {
         text: "RECOMMENCER",
-        action: "goToChapter('startObj')",
+        action: bouton2.addEventListener("click", function () {goToChapter('startObj')}),
       },
       {
         text: "",
@@ -219,7 +218,7 @@ const chapterObj = {
       },
       {
         text: "RECOMMENCER",
-        action: "goToChapter('startObj')",
+        action: bouton2.addEventListener("click", function () {goToChapter('startObj')}),
       },
       {
         text: "",
@@ -239,7 +238,7 @@ const chapterObj = {
       },
       {
         text: "RECOMMENCER",
-        action: "goToChapter('startObj')",
+        action: bouton2.addEventListener("click", function () {goToChapter('startObj')}),
       },
       {
         text: "",
