@@ -18,7 +18,7 @@ const chapterObj = {
       },
       {
         text: "COMMENCER",
-        action: bouton2.addEventListener("click", function () {goToChapter('firstChapterObj');}),
+        action: bouton2.addEventListener("click", function () {goToChapter('firstChapterObj')}),
       
         
       },
