@@ -17,7 +17,7 @@ const chaptersObj = {
       
       }]
   },
-
+ 
   firstChapterObj: {
     subtitle: "Cowboy en détresse",
     text: "Vous décollez du porte-avions en compagnie de votre meilleur ami Cowboy et deux autres pilotes d’expériences.  Tout à coup, deux jets ennemis font leur apparition et poursuivre Cowboy. Vous devez agir vite et faire un choix. Attendre que votre équipe vienne vous aider, agir seul et l’aider à les combattre où l’abonner et continuer la mission coûte que coûte. ",
