@@ -66,10 +66,24 @@ html {
 
   }
   
-  .btn{
+  .btn-panel{
     
-    background-color: rgb(91, 187, 243);
-    justify-content: space-between;
+   
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      
+      flex-wrap: wrap;
+      color:black;
+    font-size: 105%;
+    font-weight: bold;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+      
+    }
+
+    .btn{background-color: rgb(91, 187, 243);
     color:black;
     font-size: 105%;
     padding: 5px 15px 10px 10px;
@@ -80,7 +94,7 @@ html {
     border: 2px solid white;
     width: 150px;
 
-}
+    }
 
 .btn:hover{
   background-color: red;
