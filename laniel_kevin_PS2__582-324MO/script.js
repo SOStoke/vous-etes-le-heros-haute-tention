@@ -203,7 +203,7 @@ function goToChapter(chapterName) {
   chapterText.innerText = chaptersObj[chapterName].text;
 
   /**** INSTRUCTIONS PS3.1: 3 *****/
-const chapterVideoContainer = document.querySelector(".video");
+//const chapterVideoContainer = document.querySelector(".video");
   const chapterImgContainer = document.querySelector(".img-container");
   chapterImgContainer.src = chaptersObj[chapterName].img;
 
