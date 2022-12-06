@@ -1,9 +1,9 @@
-//let start = startObj;
-//if (localStorage.getItem("chapterObj") != null) {
-// start = localStorage.getItem("chapterObj");
-//} else {
-//start = goToChapter('startObj');
-//}
+let start = startObj;
+if (localStorage.getItem("chapterObj") != null) {
+ start = localStorage.getItem("chapterObj");
+} else {
+start = goToChapter('startObj');
+}
 
 const chaptersObj = {
   startObj: {
@@ -13,7 +13,7 @@ const chaptersObj = {
     options: [
       {
         text: "COMMENCER",
-        action: "changeStateKeyNotFounded()",
+        action: "changeStateKeyNotFounded()"
       },
     ],
   },
@@ -35,6 +35,10 @@ const chaptersObj = {
       {
         text: "ABANDONNER",
         action: "goToChapter('secondChapterObj')",
+      },
+      {
+        text: "Effacer ma partie",
+        action: "reset()",
       },
     ],
   },
@@ -67,6 +71,10 @@ const chaptersObj = {
       {
         text: "HAUT",
         action: "goToChapter('thirdDeathObj')",
+      },
+      {
+        text: "Effacer ma partie",
+        action: "reset()",
       },
     ],
   },
@@ -108,6 +116,10 @@ const chaptersObj = {
         text: "HANGAR",
         action: "goToChapter('fourthChapterObj')",
       },
+      {
+        text: "Effacer ma partie",
+        action: "reset()",
+      },
     ],
   },
 
@@ -134,7 +146,11 @@ const chaptersObj = {
       },
       {
         text: "VOLER",
-        action: "isKeyFounded('startObj')",
+        action: "isKeyFounded()",
+      },
+      {
+        text: "Effacer ma partie",
+        action: "reset()",
       },
     ],
   },
@@ -155,11 +171,11 @@ const chaptersObj = {
     subtitle: "Mission Accomplie",
     text: "Bien que la piste était endommagée de l’explosion vous êtes parvenue à décoller. L’engin semblait toujours fonctionnel et vous vous diriger vers le QG. Passant être en sécurité, un jet ennemi réalisa que le f-16 n’était pas inscrit à l’un de leurs pilotes partis à sa trousse. Vois tenté de faire une manœuvre et vous vous retrouver en arrière de lui. Vous tentez de l’abattre, mais en appuyant sur le bouton de feu, rien n’y sort. Il est probablement brisé. Alors que le repris le dessus avait le feu vert pour tirer, un autre jet apparu. C’était Cowboy, il est revenu vous chercher. Il tira sur l’autre jet et le mit or nuire. Retourner à la base, vous vous êtes serré là et il dit avec un sourire ricaneur, maintenant on est Kit Maverick. ",
     video: "image/video_1.mp4",
-    img: "image/jet11.jpg",
+   /* img: "image/jet11.jpg",*/
     options: [
       {
         text: "RECOMMENCER",
-        action: "isThereVideo()",
+        action: "goToChapter('startObj')",
       },
     ],
   },
@@ -203,7 +219,7 @@ function goToChapter(chapterName) {
   chapterText.innerText = chaptersObj[chapterName].text;
 
   /**** INSTRUCTIONS PS3.1: 3 *****/
-//const chapterVideoContainer = document.querySelector(".video");
+const chapterVideoContainer = document.querySelector(".video");
   const chapterImgContainer = document.querySelector(".img-container");
   chapterImgContainer.src = chaptersObj[chapterName].img;
 
@@ -217,18 +233,19 @@ function goToChapter(chapterName) {
     } else {
       chapterImgContainer.src = chaptersObj[chapterName].img;
     }
+    
 
    
+    
   
-  //exists();
 
-  //let exists = function() {
-  //if (chaptersObj[chapterName].hasOwnProperty('video') = true) {
-  // chapterImgContainer.src = chaptersObj[chapterName].video;
-  //}else{
-  //  chapterImgContainer.src = chaptersObj[chapterName].img;
-  // }
-  //}
+  let isThereVideo = function() {
+  if (chaptersObj[chapterName].hasOwnProperty('video') = true) {
+   chapterImgContainer.src = chaptersObj[chapterName].video;
+  }else{
+    chapterImgContainer.src = chaptersObj[chapterName].img;
+   }
+  }
 
   /**** INSTRUCTIONS PS3.1: 4 *****/
   let optionsArr = chaptersObj[chapterName].options;
@@ -259,8 +276,9 @@ function goToChapter(chapterName) {
         }
     });
     */
-  let start = startObj;
+ /* let start = startObj;
   localStorage.setItem("chapterObj", "startObj");
+  */
 }
 
 goToChapter("startObj");
@@ -285,3 +303,10 @@ let isKeyFounded = function () {
     goToChapter("sixthDeathObj");
   }
 };
+
+
+let reset = function () {
+  changeStateKeyNotFounded();
+  goToChapter("startObj");
+  localStorage.clear();
+}
