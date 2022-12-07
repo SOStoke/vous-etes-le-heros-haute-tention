@@ -1,10 +1,10 @@
-let start = startObj;
+/*let start = startObj;
 if (localStorage.getItem("chapterObj") != null) {
  start = localStorage.getItem("chapterObj");
 } else {
 start = goToChapter('startObj');
 }
-
+*/
 const chaptersObj = {
   startObj: {
     subtitle: "Utlime mission",
@@ -22,7 +22,7 @@ const chaptersObj = {
     subtitle: "Cowboy en détresse",
     text: "Vous décollez du porte-avions en compagnie de votre meilleur ami Cowboy et deux autres pilotes d’expériences.  Tout à coup, deux jets ennemis font leur apparition et poursuivre Cowboy. Vous devez agir vite et faire un choix. Attendre que votre équipe vienne vous aider, agir seul et l’aider à les combattre où l’abonner et continuer la mission coûte que coûte. ",
     video: "image/video_2.mp4",
-    img: "image/jet2.jpg",
+    //img: "image/jet2.jpg",//
     options: [
       {
         text: "ATTENDRE",
@@ -195,8 +195,25 @@ const chaptersObj = {
 
 /**** INSTRUCTIONS PS2.2: 6, 8 *****/
 function goToChapter(chapterName) {
+
+body.classList.add('chapterName');
+
+
+
+
   const music = new Audio("image/missile.mp3");
-  music.play();
+  
+ let audio = true;
+ checkbox = document.querySelector(".son")
+
+
+
+    if(checkbox.checked){
+      music.play();
+    } else {
+      music.paused();
+    }
+    
 
   /**** INSTRUCTIONS PS2.2: 6 *****/
   // console.log(chaptersObj.beginningObj.subtitle);
@@ -222,13 +239,14 @@ function goToChapter(chapterName) {
 const chapterVideoContainer = document.querySelector(".video");
   const chapterImgContainer = document.querySelector(".img-container");
   chapterImgContainer.src = chaptersObj[chapterName].img;
-
+  //chapterVideoContainer.setAttribute("hidden");
+  
  
     
 
     if (chaptersObj[chapterName].video != null) {
-      chapterVideoContainer.show;
-      chapterImgContainer.ariaHidden;
+      chapterVideoContainer.removeAttribute("hidden");
+      //chapterImgContainer.remove();
       chapterVideoContainer.src = chaptersObj[chapterName].video;
     } else {
       chapterImgContainer.src = chaptersObj[chapterName].img;
@@ -239,13 +257,14 @@ const chapterVideoContainer = document.querySelector(".video");
     
   
 
-  let isThereVideo = function() {
+  /*let isThereVideo = function() {
   if (chaptersObj[chapterName].hasOwnProperty('video') = true) {
    chapterImgContainer.src = chaptersObj[chapterName].video;
+   chapterVideoContainer.removeAttribute("hidden");
   }else{
     chapterImgContainer.src = chaptersObj[chapterName].img;
    }
-  }
+  }*/
 
   /**** INSTRUCTIONS PS3.1: 4 *****/
   let optionsArr = chaptersObj[chapterName].options;

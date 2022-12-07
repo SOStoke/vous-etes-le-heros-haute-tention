@@ -65,7 +65,22 @@ html {
     margin-top: -3%;
 
   }
-  
+  .red{
+    background-color: red;
+
+  }
+  .audio{
+    display: flex;
+flex-direction: column;
+align-self: flex-end;
+  }
+  .video{
+    position: absolute;
+    left: 29px;
+    bottom: 85px;
+    
+  }
+
   .btn-panel{
     
    
